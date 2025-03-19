@@ -72,4 +72,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'web-admin-panel-5ebfb.firebasestorage.app',
     iosBundleId: 'com.example.ytEcommerceAdminPanel',
   );
+
 }
