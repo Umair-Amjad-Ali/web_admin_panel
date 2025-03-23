@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'utils/constants/colors.dart';
+import 'package:yt_ecommerce_admin_panel/common/widgets/layouts/templates/site_layout.dart';
+import 'package:yt_ecommerce_admin_panel/utils/routes/app_routes.dart';
+import 'package:yt_ecommerce_admin_panel/utils/routes/routes.dart';
 import 'utils/constants/text_strings.dart';
 import 'utils/device/web_material_scroll.dart';
 import 'utils/theme/theme.dart';
@@ -17,33 +19,68 @@ class App extends StatelessWidget {
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(),
-      home: const Scaffold(
-        backgroundColor: TColors.primary,
-        body: FiestScreen(),
+      getPages: TAppRoutes.pages,
+      initialRoute: TRoutes.responsiveDesignScreen,
+      home: const ResponsiveDesignScreen(), // directly load screen
+    );
+  }
+}
+
+class ResponsiveDesignScreen extends StatelessWidget {
+  const ResponsiveDesignScreen({
+    super.key,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return const SiteTempleteLayout(
+      desktop: Desktop(),
+      tablet: Tablet(),
+      mobile: Mobile(),
+    );
+  }
+}
+
+class Desktop extends StatelessWidget {
+  const Desktop({
+    super.key,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Desktop',
+        style: TextStyle(fontSize: 30),
       ),
     );
   }
 }
 
-class FiestScreen extends StatelessWidget {
-  const FiestScreen({super.key});
-
+class Tablet extends StatelessWidget {
+  const Tablet({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('First Screen'),
-        centerTitle: true,
+    return const Center(
+      child: Text(
+        'Tablet',
+        style: TextStyle(fontSize: 30),
       ),
     );
   }
 }
 
-class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
-
+class Mobile extends StatelessWidget {
+  const Mobile({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return const Center(
+      child: Text(
+        'Mobile',
+        style: TextStyle(fontSize: 30),
+      ),
+    );
   }
 }
