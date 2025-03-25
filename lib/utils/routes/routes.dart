@@ -25,4 +25,10 @@ class TRoutes {
   static const createCustomer = '/createCustomer';
   static const customerDetails = '/customerDetails';
   static const responsiveDesignScreen = '/responsiveDesignScreen';
+
+  static const firstScreen = '/';
+  static const secondScreen = '/secondScreen';
+  static const thirdScreen = '/thirdScreen';
+
+  static List sidebarMenuItems = [firstScreen, secondScreen, thirdScreen];
 }

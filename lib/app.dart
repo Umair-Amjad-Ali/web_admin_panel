@@ -84,3 +84,48 @@ class Mobile extends StatelessWidget {
     );
   }
 }
+
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({
+    super.key,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'FirstScreen',
+        style: TextStyle(fontSize: 30),
+      ),
+    );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({
+    super.key,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'SecondScreen',
+        style: TextStyle(fontSize: 30),
+      ),
+    );
+  }
+}
+
+class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({
+    super.key,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'ThirdScreen',
+        style: TextStyle(fontSize: 30),
+      ),
+    );
+  }
+}

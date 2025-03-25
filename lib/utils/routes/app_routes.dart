@@ -8,9 +8,14 @@ class TAppRoutes {
       name: TRoutes.responsiveDesignScreen,
       page: () => const ResponsiveDesignScreen(),
     ),
-    // GetPage(
-    //   name: TRoutes.login,
-    //   page: () => const Placeholder(),
-    // ),
+    GetPage(name: TRoutes.firstScreen, page: () => const FirstScreen()),
+    GetPage(
+      name: TRoutes.secondScreen,
+      page: () => const SecondScreen(),
+    ),
+    GetPage(
+      name: TRoutes.thirdScreen,
+      page: () => const ThirdScreen(),
+    ),
   ];
 }
